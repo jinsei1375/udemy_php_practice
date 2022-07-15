@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "パスワード入力してね"
+AuthUserFile /Applications/MAMP/htdocs/php_test/mainte/.htpassword
+require valid-user
