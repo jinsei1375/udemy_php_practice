@@ -1,6 +1,26 @@
 <?php
 
-  class Product {
+  // 抽象クラス
+  abstract class AbstractProduct {
+    public function echoProduct() {
+      echo '親クラスです。';
+    }
+
+    abstract public function getProduct();
+  }
+
+
+  class BaseProduct extends AbstractProduct {
+    public function echoProduct() {
+      echo '親クラスです。';
+    }
+
+    public function getProduct() {
+      echo '親クラスです。';
+    }
+  }
+
+  class Product extends BaseProduct {
 
     private $product = [];
 
@@ -25,6 +45,9 @@
   $instance = new Product('商品');
 
   $instance->getProduct();
+  echo '<br>';
+
+  $instance->echoProduct();
   echo '<br>';
 
   $instance->addProduct('追加商品');
